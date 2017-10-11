@@ -1,4 +1,4 @@
-### 本地安装
+### 本地安装
 
 `git clone https://github.com/ximolang/Music-analysis-player.git`
 
