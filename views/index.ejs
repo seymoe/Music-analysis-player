@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<div id="wrapper" class="normalpage">
+  <div class="header">
+      <h1><%= title %></h1>
+      <div id="changepage"><i class="icon-cog"></i></div>
+      <ul class="draw-type">
+        <li data-type="dot" class="selected"><i class="icon-heart"></i></li>
+        <li data-type="column"><i class="icon-spinner9"></i></li>
+        <!--<li data-type="circle"><i class="icon-upload3"></i></li>-->
+      </ul>
+    </div>
+    <div class="music-list">
+      <h2>歌曲列表</h2>
+      <ul id="music_list">
+        <% music.forEach(function (name){ %>
+        <li title="<%= name %>"><%= name %></li>
+        <% }) %>
+      </ul>
+    </div>
+    <div class="canvas-wrap" id="canvasbox"></div>
+    <div class="footer">
+      <div class="play-control">
+        <span id="prev_music" class="icon-previous"></span>
+        <span id="pause_music" class="icon-play2"></span>
+        <span id="next_music" class="icon-next"></span>
+      </div>
+      <div class="volume-wrap"><i id="icon_volume" class="icon-volume-medium"></i><input id="volume_control" type="range" min="0" max="100" value="50"></div>
+    </div>
+</div>
+<div id="author_info">
+  <p>Music Analysis Player</p>
+  <p>加载资源后需要调用硬件分析音频资源，加载过程较慢，请耐心等待···</p>
+  <p>© 2016 <a href="http://txliang.com" target="_blank">曦莫琅</a></p>
+</div>
+<script src="/javascripts/visualize.js"></script>
+<script src="/javascripts/index.js"></script>
+</body>
+</html>
